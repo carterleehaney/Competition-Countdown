@@ -4,27 +4,9 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'AlarmClock';
-    src: url('alarm clock.ttf') format('truetype');
-}
-
-/* Add this new @font-face for Sarpanch */
-@font-face {
-    font-family: 'Sarpanch';
-    src: url('Sarpanch-Regular.ttf') format('truetype');
-}
-
 body {
-    --dot-bg: black;
-    --dot-color: white;
-    --dot-size: 1px;
-    --dot-space: 22px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
-    font-family: 'Sarpanch', Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000080, #000000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +15,7 @@ body {
 
 .container {
     text-align: center;
-    background: linear-gradient(135deg, #ffffff, #cacaca);
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,13 +24,11 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 2em;
-    font-family: 'Sarpanch', Arial, sans-serif;
 }
 
 h2 {
     margin: 10px 0;
     font-size: 1.5em;
-    font-family: 'Sarpanch', Arial, sans-serif;
 }
 
 #countdown1, #countdown2, #countdown3, #countdown4 {
