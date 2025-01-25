@@ -8,8 +8,29 @@ function daysUntil(targetDate) {
 }
 
 // Update the countdowns
-document.getElementById("days1").innerText = daysUntil('2025-02-09');
-document.getElementById("days2").innerText = daysUntil('2025-02-29');
-document.getElementById("days3").innerText = daysUntil('2025-03-22');
-document.getElementById("days4").innerText = daysUntil('2025-04-26');
-document.getElementById("days5").innerText = daysUntil('2025-10-3');
+function timeUntil(targetDate) {
+    const now = new Date();
+    const target = new Date(targetDate);
+    const timeDiff = target - now; // Difference in milliseconds
+
+    const daysLeft = Math.floor(timeDiff / (1000 * 3600 * 24));
+    const hoursLeft = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600)).toString().padStart(2, '0');
+    const minutesLeft = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60)).toString().padStart(2, '0');
+    const secondsLeft = Math.floor((timeDiff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+    return `${daysLeft}:${hoursLeft}:${minutesLeft}:${secondsLeft}`;
+}
+
+function updateCountdowns() {
+    document.getElementById("days1").innerText = timeUntil('2025-02-09');
+    document.getElementById("days2").innerText = timeUntil('2025-02-29');
+    document.getElementById("days3").innerText = timeUntil('2025-03-22');
+    document.getElementById("days4").innerText = timeUntil('2025-04-26');
+    document.getElementById("days5").innerText = timeUntil('2025-10-03');
+}
+
+// Initial call to update countdowns
+updateCountdowns();
+
+// Update countdowns every second
+setInterval(updateCountdowns, 1000);
