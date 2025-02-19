@@ -31,11 +31,11 @@ h2 {
     font-size: 1.5em;
 }
 
-#countdown1, #countdown2, #countdown3, #countdown4 {
+#countdown1, #countdown2, #countdown3, #countdown4, #countdown5, #countdown6 {
     margin-top: 20px;
 }
 
-#days1, #days2, #days3, #days4, #days5 {
+#days1, #days2, #days3, #days4, #days5, #days6 {
     font-family: 'AlarmClock', Arial, sans-serif;
     font-size: 2em;
 }
