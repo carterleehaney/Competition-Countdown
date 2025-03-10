@@ -22,7 +22,6 @@ function timeUntil(targetDate) {
 }
 
 function updateCountdowns() {
-    document.getElementById("days2").innerText = timeUntil('2025-02-28'); // Changed date
     document.getElementById("days3").innerText = timeUntil('2025-03-21');
     document.getElementById("days4").innerText = timeUntil('2025-04-26');
     document.getElementById("days5").innerText = timeUntil('2025-10-02');
